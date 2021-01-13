@@ -1,5 +1,5 @@
 #!/bin/bash
 # bar: build and run
 cargo build --target wasm32-unknown-unknown --release
-cp target/wasm32-unknown-unknown/release/theory_frog.wasm ./
-firefox test.html
+cp target/wasm32-unknown-unknown/release/theory_frog.wasm ./tf-rsrc
+firefox theory-frog.html

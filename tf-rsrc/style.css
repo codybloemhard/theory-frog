@@ -1,25 +1,66 @@
 body, html{
-    font-size: 20px;
     font-family: "Monospace";
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #CCC;
     background: #070707;
+    line-height: 1.8em;
     padding: 0;
     margin: 0;
+    text-indent: 0;
+}
+
+.al{
+    text-align: left;
+    padding-left: 25px;
+}
+
+.ar{
+    text-align: right;
+    padding-right: 50px;
+}
+
+.split{
+    width: 45%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+h1{
+    color: #FFF;
+    font-size: 64px;
+    margin: 35px 0px;
+    padding: 0;
+    line-height: 0;
+}
+
+img.ar{
+    margin: 8px 0px 0px 0px;
+    padding: 0;
+    border-radius: 50%;
+    width: 80px;
+    heigth: 80px;
+    float: left;
+}
+
+a.ar{
+    padding: 0;
+    margin: 0px 10px;
+    float: right;
+    display: inline-block;
 }
 
 #query-bar{
     width: 100%;
-    padding: 15px;
-    maring: 10px;
-    background: #111;
+    padding: 0px 15px 15px 15px;
+    margin: 0px;
+    background-image: url('header.png');
     display: inline-block;
     text-align: center;
 }
 
 input{
     width: 80%;
+    padding: 10px;
     color: #DDD;
     background: #111111;
     text-decoration: none;
@@ -35,6 +76,7 @@ input{
 
 button{
     width: 10%;
+    padding: 10px;
     color: #DDD;
     background: #111111;
     text-align: center;
@@ -46,7 +88,6 @@ button{
     border-style: solid;
     border-color: white;
     border-radius: 10px;
-    padding-left: 10px;
 }
 
 #answerblock{
@@ -56,4 +97,6 @@ button{
 
 #answer p{
     margin: 0px;
+    color: #EEE;
+    font-size: 22px;
 }
