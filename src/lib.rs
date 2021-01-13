@@ -6,7 +6,7 @@ use music_theory::theory::*;
 
 #[no_mangle]
 pub fn main() {
-    window::alert(window(),"hello world!");
+    // window::alert(window(),"hello world!");
     let doc = document();
     let button = document::query_selector(doc, "button");
     let listener = create_event_listener();

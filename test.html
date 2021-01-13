@@ -2,12 +2,21 @@
 <html lang="en-US">
   <head>
     <title>Theory Frog</title>
-    <script src="http://unpkg.com/web-dom@latest/web-dom.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody Bloemhard</title>
+    <meta name=description content="Theory Frog: get help with music theory. Query things such as notes, chords, scales.">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="web-dom.min.js"></script>
   </head>
   <body>
-    <input type="text" value=""/>
-    <button>Ask!</button>
-    <p id="answer">little test</p>
+    <div id="query-bar">
+        <button>Ask!</button>
+        <input type="text" value=""/>
+    </div>
+    <div id="answerblock">
+        <div id="answer"></div>
+    </div>
     <web-dom module="theory_frog.wasm"></web-dom>
   </body>
 </html>
