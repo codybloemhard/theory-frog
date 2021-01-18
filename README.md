@@ -6,8 +6,8 @@ you can query it and it will generate information for you.
 ### Notes
 #### Input
 Type in a list of comma separated notes. Is not case sensitive.
-For sharp and flats, use `s` and `b`.
-Examples: `Cs,Ds,Es`, `f,a,c,e`, `bb,db,fb`.
+For sharp and flats, use `#`, `b`, `♯` and `♭`.
+Examples: `C#,D#,E#`, `f,a,c,e`, `bb,db,fb`.
 #### Output
 It will generate(if named) inversions(rotation of a chord), subchords(subsequence of a chord), chordtone wholetone scale(a way to build a scale from a tetrad),
 strict chordscales(where the chordtones are on uneven scale degrees), supersequences(scales such that the notes appear in it in order and uninterrupted)

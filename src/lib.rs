@@ -19,16 +19,27 @@ pub fn callback(_listener: EventListener, _event: Event){
     let input = document::query_selector(doc, "input");
     let msg = htmlinput::get_value(input);
     let output = notes_analysis(msg, ChordStyling::Std);
-    let html = string_to_html_string(output);
+    let html = structure_to_html_string(output);
     let answer_obj = get_element_by_id(doc, "answer");
     set_inner_html(answer_obj, &html);
 }
 
-pub fn string_to_html_string(string: String) -> String{
-    let mut builder = "<p>".to_string();
+pub fn structure_to_html_string(structure: Vec<(String, String)>) -> String{
+    let mut builder = String::new();
+    for (header, content) in structure{
+        if content.len() == 0 { continue; }
+        builder.push_str("<div class=\"piece\">");
+        builder.push_str(&format!("<h2>{}</h2>", header));
+        string_into_html_string(&mut builder, content);
+        builder.push_str("</div>")
+    }
+    builder
+}
+
+pub fn string_into_html_string(builder: &mut String, string: String){
+    builder.push_str("<p>");
     for c in string.chars(){
         if c == '\n' { builder.push_str("</p><p>"); }
         else { builder.push(c); }
     }
-    builder
 }
