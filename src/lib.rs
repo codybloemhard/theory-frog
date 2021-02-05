@@ -9,8 +9,10 @@ pub fn main() {
     // window::alert(window(),"hello world!");
     let doc = document();
     let button = document::query_selector(doc, "button");
+    let input = document::query_selector(doc, "input");
     let listener = create_event_listener();
     eventtarget::add_event_listener(button, "click", listener);
+    eventtarget::add_event_listener(input, "keyup", listener);
     // Set up help with and example when the site starts
     let answer_obj = get_element_by_id(doc, "answer");
     let help_msg = get_help_html_object();
