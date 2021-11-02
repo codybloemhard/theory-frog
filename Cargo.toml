@@ -12,4 +12,4 @@ crate-type =["cdylib"]
 [dependencies]
 web-dom = "0.1"
 wasm-bindgen = "0.2"
-music-theory-query = "0.1.11"
+music-theory-query = "0.1.14"

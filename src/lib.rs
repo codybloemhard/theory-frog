@@ -65,7 +65,7 @@ pub fn get_help_html_object() -> String{
         <h2>Help</h2>
         <p>You can access this help page by typing \"help\" in the bar and press \"Ask!\".</p>
         <h2>Input</h2>
-        <p>Type in a list of comma separated notes. Is not case sensitive. For sharp and flats, use #, b, ♯ and ♭. Examples: C#,D#,E#, f,a,c,e, bb,db,fb.</p>
+        <p>Type in a list of comma separated notes. Is not case sensitive. For sharp and flats, use #, b, ♯ and ♭. Examples: \"f,a,c,e\", \"a,b,c,d,e,f,g\", \"bb,db,fb\".</p>
         <h2>Output</h2>
         <p>It will generate(if named) inversions(rotation of a chord), subchords(subsequence of a chord), chordtone wholetone scale(a way to build a scale from a tetrad), strict chordscales(where the chordtones are on uneven scale degrees), supersequences(scales such that the notes appear in it in order and uninterrupted) and supersets(scales such that the notes are all present in it).</p>
         <h2>About</h2>
