@@ -1,18 +1,29 @@
 # Theøry Frøg
+
 ## What is Theøry Frøg?
+
 Theøry Frøg is an website that can help you with music theory!
 you can query it and it will generate information for you.
+[https://codyb.xyz/theory-frog.html](codyb.xyz/theory-frog.html)
+
 ### Usage
+
 ### Notes
+
 #### Input
+
 Type in a list of comma separated notes. Is not case sensitive.
 For sharp and flats, use `#`, `b`, `♯` and `♭`.
 Examples: `C#,D#,E#`, `f,a,c,e`, `bb,db,fb`.
+
 #### Output
+
 It will generate(if named) inversions(rotation of a chord), subchords(subsequence of a chord), chordtone wholetone scale(a way to build a scale from a tetrad),
 strict chordscales(where the chordtones are on uneven scale degrees), supersequences(scales such that the notes appear in it in order and uninterrupted)
 and supersets(scales such that the notes are all present in it).
+
 #### Example
+
 	Input
 
 Your input: F, A, C, E, 
@@ -170,8 +181,28 @@ F Super Phrygian ♭♭3 ♮7, 7ᵉ mode of Enigmatic Minor: F, G♭, A♭♭, B
 ----------------------------------------
 
 ## Development
+
 Theøry Frøg is a simple front-end web app, without backend.
 It's made with simple Html, Css, Js, and WASM!
-A Rust library that I build does the actual calculations, which is imported into this theory-frog rust crate (https://github.com/ocdy1001/music-theory).
+A Rust library that I build does the actual calculations, which is imported into this theory-frog rust crate (https://github.com/codybloemhard/music-theory).
 The theory-frog rust lib is than compiled to WASM and used.
 Theøry Frøg is made by Cody Bloemhard.
+
+## License
+
+```
+Copyright (C) 2022 Cody Bloemhard
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+```

@@ -70,7 +70,7 @@ pub fn get_help_html_object() -> String{
         <p>It will generate(if named) inversions(rotation of a chord), subchords(subsequence of a chord), chordtone wholetone scale(a way to build a scale from a tetrad), strict chordscales(where the chordtones are on uneven scale degrees), supersequences(scales such that the notes appear in it in order and uninterrupted) and supersets(scales such that the notes are all present in it).</p>
         <h2>About</h2>
         <p>Theøry Frøg is a simple front-end web app, without backend. It's made with simple Html, Css, Js, and WASM! A Rust library that I build does the actual calculations, which is imported into this theory-frog rust crate. The theory-frog rust lib is than compiled to WASM and used. Theøry Frøg is made by Cody Bloemhard.</p>
-        <a href=\"https://github.com/ocdy1001/theory-frog\" target=\"_blank\">github repository</a>
+        <a href=\"https://github.com/codybloemhard/theory-frog\" target=\"_blank\">github repository</a>
         <h2>Example</h2>
         <p>Below is an example output of the input \"f,a,c,e\"</p>
     ".to_string();
