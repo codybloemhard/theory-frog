@@ -4,7 +4,7 @@
 
 Theøry Frøg is an website that can help you with music theory!
 you can query it and it will generate information for you.
-[https://codyb.xyz/theory-frog.html](codyb.xyz/theory-frog.html)
+[codyb.xyz/theory-frog.html](https://codyb.xyz/theory-frog.html)
 
 ### Usage
 
