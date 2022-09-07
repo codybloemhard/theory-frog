@@ -1,17 +1,14 @@
-use web_dom::*;
-use web_dom::document::get_element_by_id;
-use web_dom::element::set_inner_html;
-use music_theory::*;
-use music_theory::theory::*;
+use web_dom::{ *, document::get_element_by_id, element::set_inner_html };
+use music_theory::{ *, theory::* };
+
+use std::fmt::Write;
 
 #[no_mangle]
 pub fn main() {
     // window::alert(window(),"hello world!");
     let doc = document();
-    let button = document::query_selector(doc, "button");
     let input = document::query_selector(doc, "input");
     let listener = create_event_listener();
-    eventtarget::add_event_listener(button, "click", listener);
     eventtarget::add_event_listener(input, "keyup", listener);
     // Set up help with and example when the site starts
     let answer_obj = get_element_by_id(doc, "answer");
@@ -29,9 +26,11 @@ pub fn callback(_listener: EventListener, _event: Event){
         set_inner_html(answer_obj, &get_help_html_object());
         return;
     }
-    let output = notes_analysis(msg, ChordStyling::Std);
+    let output = notes_analysis(msg, ChordStyle::Std(MStyle::Symbol, EStyle::Symbol));
     let html = if output.is_empty() {
-        let mut res = "<div class=\"piece\"><h2>Error</h2><p>Could not parse input! Try again!</p></div>".to_string();
+        let mut res =
+            "<div class=\"piece\"><h2>Error</h2><p>Could not parse input! Try again!</p></div>"
+            .to_string();
         res.push_str(&get_help_html_object());
         res
     } else {
@@ -45,7 +44,7 @@ pub fn structure_to_html_string(structure: Vec<(String, String)>) -> String{
     for (header, content) in structure{
         if content.is_empty() { continue; }
         builder.push_str("<div class=\"piece\">");
-        builder.push_str(&format!("<h2>{}</h2>", header));
+        let _ = write!(builder, "<h2>{}</h2>", header);
         string_into_html_string(&mut builder, content);
         builder.push_str("</div>")
     }
@@ -63,7 +62,7 @@ pub fn string_into_html_string(builder: &mut String, string: String){
 pub fn get_help_html_object() -> String{
     let mut msg = "<div class=\"piece\">
         <h2>Help</h2>
-        <p>You can access this help page by typing \"help\" in the bar and press \"Ask!\".</p>
+        <p>You can access this help page by typing \"help\" in the bar.</p>
         <h2>Input</h2>
         <p>Type in a list of comma separated notes. Is not case sensitive. For sharp and flats, use #, b, ♯ and ♭. Examples: \"f,a,c,e\", \"a,b,c,d,e,f,g\", \"bb,db,fb\".</p>
         <h2>Output</h2>
@@ -74,7 +73,10 @@ pub fn get_help_html_object() -> String{
         <h2>Example</h2>
         <p>Below is an example output of the input \"f,a,c,e\"</p>
     ".to_string();
-    let output = notes_analysis("f,a,c,e".to_string(), ChordStyling::Std);
+    let output = notes_analysis(
+        "f,a,c,e".to_string(),
+        ChordStyle::Std(MStyle::Symbol, EStyle::Symbol)
+    );
     msg.push_str(&structure_to_html_string(output));
     msg.push_str("</div>");
     msg

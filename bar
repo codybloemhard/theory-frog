@@ -2,4 +2,6 @@
 # bar: build and run
 cargo build --target wasm32-unknown-unknown --release
 cp target/wasm32-unknown-unknown/release/theory_frog.wasm ./tf-rsrc
-firefox theory-frog.html
+# python -m http.server &
+# firefox localhost:8000/theory-frog.html
+

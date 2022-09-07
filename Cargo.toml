@@ -1,7 +1,7 @@
 [package]
 name = "theory-frog"
 version = "0.1.0"
-authors = ["Cody Bloemhard <cblmhrd@live.nl>"]
+authors = ["Cody Bloemhard <codybloemhard@gmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -9,7 +9,12 @@ edition = "2018"
 [lib]
 crate-type =["cdylib"]
 
+[profile.release]
+strip = true
+lto = true
+opt-level = "s"
+
 [dependencies]
 web-dom = "0.1"
 wasm-bindgen = "0.2"
-music-theory-query = "0.1.14"
+music-theory-query = "0.2.1"
