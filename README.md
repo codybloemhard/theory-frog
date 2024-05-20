@@ -4,7 +4,6 @@
 
 Theøry Frøg is an website that can help you with music theory!
 you can query it and it will generate information for you.
-[codyb.xyz/theory-frog.html](https://codyb.xyz/theory-frog.html)
 
 ### Usage
 
@@ -183,15 +182,14 @@ F Super Phrygian ♭♭3 ♮7, 7ᵉ mode of Enigmatic Minor: F, G♭, A♭♭, B
 ## Development
 
 Theøry Frøg is a simple front-end web app, without backend.
-It's made with simple Html, Css, Js, and WASM!
-A Rust library that I build does the actual calculations, which is imported into this theory-frog rust crate (https://github.com/codybloemhard/music-theory).
+It's made with simple HTML, CSS, JS, and WASM.
+A Rust library does the actual calculations, which is imported into this theory-frog rust crate (<https://github.com/codybloemhard/music-theory>).
 The theory-frog rust lib is than compiled to WASM and used.
-Theøry Frøg is made by Cody Bloemhard.
 
 ## License
 
 ```
-Copyright (C) 2022 Cody Bloemhard
+Copyright (C) 2024 Cody Bloemhard
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
